@@ -20,7 +20,7 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'TechVJBot')
 API_ID = int(environ.get('API_ID', '21118391'))
 API_HASH = environ.get('API_HASH', '43b91164d7825dc577c2baa7c6cdcee6')
-BOT_TOKEN = environ.get('BOT_TOKEN', "6471554652:AAHtqYgkU3iUHMtsoU3S367zeaVdT5whBPo")
+BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
@@ -37,7 +37,7 @@ auth_users = [int(user) if id_pattern.search(user) else user for user in environ
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 # auth_channel means force subscribe channel.
-auth_channel = environ.get('AUTH_CHANNEL', '') # give your force subscribe channel id here else leave it blank
+auth_channel = environ.get('AUTH_CHANNEL', '-1001970820349') # give your force subscribe channel id here else leave it blank
 auth_grp = environ.get('AUTH_GROUP', '') # give your force subscribe group id here else leave it blank
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
